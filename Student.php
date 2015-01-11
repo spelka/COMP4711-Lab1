@@ -13,6 +13,9 @@
  */
 class Student
 {
+    /**
+     * Constructor for the student class.
+     */
     function _construct()
     {
         $this->surname ='';
@@ -21,16 +24,29 @@ class Student
         $this->grades = array();
     }
     
+    /**
+     * Adds an email to an array of emails associated with the student.
+     * @param type $which an unsigned integer
+     * @param type $address a string containing the email address
+     */
     function add_email ( $which, $address )
     {
         $this->emails[$which] = $address;
     }
     
+    /**
+     * Adds a grade to the Student
+     * @param type $grade the grade that the student received
+     */
     function add_grade ( $grade )
     {
         $this->grades[] = $grade;
     }
     
+    /**
+     * determines the average grade of the student
+     * @return type double
+     */
     function average ()
     {
         $total = 0;
@@ -41,6 +57,10 @@ class Student
         return $total / count ($this->grades);
     }
     
+    /**
+     * returns a string containing the information associated with a student.
+     * @return type string
+     */
     function toString()
     {
         $result = $this->first_name . ' ' . $this->surname;
