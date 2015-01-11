@@ -58,7 +58,7 @@ class Student
     }
     
     /**
-     * returns a string containing the information associated with a student.
+     * returns a string containing the information associated with a student
      * @return type string
      */
     function toString()
@@ -67,7 +67,7 @@ class Student
         $result .= ' ('.$this->average().")\n";
         foreach($this->emails as $which=>$what)
         {   
-            $result .= $which . ': '. $what. "\n";
+            $result .= $which . ":\t". $what. "\n";
         }
         return '<pre>'.$result.'</pre>';
     }
